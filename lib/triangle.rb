@@ -13,11 +13,11 @@ class Triangle
 
       then
         if a == b && b == c
-        :isosceles
-        elsif a == b || b == c || a == c
         :equilateral
-        else
+        elsif a == b || b == c || a == c
         :scalene
+        else
+        :isosceles
         end
 
     elsif a < 0 || b < 0 || c < 0
