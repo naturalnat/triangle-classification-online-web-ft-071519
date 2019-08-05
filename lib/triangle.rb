@@ -18,9 +18,8 @@ class Triangle
   end
 
   def kind
-
+    triangle?
     # if (a + b > c) || (b + c > a) || (a + c > b)
-  if triangle? == true
       then
         if a == b && b == c
         :equilateral
