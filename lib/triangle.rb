@@ -20,7 +20,7 @@ class Triangle
         :scalene
         end
 
-    elsif a < 0 || b < 0 || c < 0
+    elsif a <= 0 || b <= 0 || c <= 0
 
       begin
         raise TriangleError
