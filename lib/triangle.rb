@@ -19,6 +19,7 @@ class Triangle
 
   def kind
     triangle?
+  end
     # if (a + b > c) || (b + c > a) || (a + c > b)
       then
         if a == b && b == c
