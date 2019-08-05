@@ -12,7 +12,9 @@ class Triangle
     if (a + b > c) || (b + c > a) || (a + c > b)
       true
     else
-      [a, b, c].each { |side| false if side <= 0 }
+      [a, b, c].each do |side|
+        raise TriangleError if side <= 0
+      end
   end
 
   def kind
