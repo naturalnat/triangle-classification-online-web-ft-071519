@@ -18,10 +18,10 @@ def kind
     else
       :scalene
     end
-  
+
  end
 
-  
+
 
   # def real_triangle
   #   if (a + b > c) || (b + c > a) || (a + c > b)
