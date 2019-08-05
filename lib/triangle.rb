@@ -24,7 +24,7 @@ class Triangle
     if (a + b > c) || (b + c > a) || (a + c > b)
       true
     elsif a <= 0 || b <= 0 || c <= 0
-          raise TriangleError if side <= 0
+          raise TriangleError
         end
         end
     end
