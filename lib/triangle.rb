@@ -9,24 +9,26 @@ class Triangle
   end
 
   def kind
-    [a, b, c].each do |side|
-      if side <= 0
-        raise TriangleError
-      elsif (a + b > c) || (b + c > a) || (a + c > b)
+    if (a + b > c) || (b + c > a) || (a + c > b)
 
       then
         if a == b && b == c
         :equilateral
         elsif a == b || b == c || a == c
-        :isosceles
+        :equilateral
         else
         :scalene
         end
+
+    elsif a < 0 || b < 0 || c < 0
+
+      begin
+        raise TriangleError
+      rescue TriangleError
+      end
     end
   end
-end
 
   class TriangleError < StandardError
   end
-
 end
