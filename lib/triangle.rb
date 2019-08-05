@@ -9,10 +9,8 @@ class Triangle
   end
 
   def kind
-    if a > 0 && b > 0 && c > 0
-      &&
-      (a + b > c), (b + c > a), (a + c > b)
-
+    if (a + b > c) || (b + c > a) || (a + c > b)
+      
       then
         if a == b && b == c
         :isosceles
@@ -20,9 +18,17 @@ class Triangle
         :equilateral
         else
         :scalene
+        end
+
+    elsif a < 0 || b < 0 || c < 0 
+      
+      begin 
+        raise TriangleError
+      rescue TriangleError 
       end
-    else
-      TriangleError
+    end
+  end
+  
   class TriangleError < StandardError
   end
 end
