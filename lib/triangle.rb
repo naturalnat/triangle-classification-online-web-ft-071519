@@ -22,8 +22,7 @@ class Triangle
 
   def real_triangle
     if (a + b > c) || (b + c > a) || (a + c > b)
-      kind
-
+      true  
      else
         [a, b, c].each do |side|
           raise TriangleError if side <= 0
