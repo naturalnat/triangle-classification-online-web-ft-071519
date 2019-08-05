@@ -10,7 +10,7 @@ class Triangle
 
   def kind
     [a, b, c].each do |side|
-      if side <= 0 
+      if side <= 0
         raise TriangleError
     real_triangle = (a + b > c) || (b + c > a) || (a + c > b)
 
