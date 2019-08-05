@@ -12,7 +12,7 @@ class Triangle
     [a, b, c].each do |side|
       if side <= 0
         raise TriangleError
-    real_triangle = (a + b > c) || (b + c > a) || (a + c > b)
+      elsif (a + b > c) || (b + c > a) || (a + c > b)
 
       then
         if a == b && b == c
