@@ -8,9 +8,17 @@ class Triangle
     @c = c
   end
 
-  def kind
+  def triangle? 
     if (a + b > c) || (b + c > a) || (a + c > b)
+      true 
+    else 
+      [a, b, c].each { |side| false if side <= 0 }
+  end
 
+  def kind
+    
+    # if (a + b > c) || (b + c > a) || (a + c > b)
+  if triangle? == true 
       then
         if a == b && b == c
         :equilateral
@@ -20,11 +28,6 @@ class Triangle
         :scalene
         end
 
-    elsif a < 0 || b < 0 || c < 0
-
-      begin
-        raise TriangleError
-      rescue TriangleError
       end
     end
   end
