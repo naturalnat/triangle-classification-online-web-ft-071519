@@ -19,9 +19,8 @@ class Triangle
 
   def kind
     triangle?
-  end
     # if (a + b > c) || (b + c > a) || (a + c > b)
-      then
+      # then
         if a == b && b == c
         :equilateral
         elsif a == b || b == c || a == c
