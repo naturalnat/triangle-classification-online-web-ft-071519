@@ -10,7 +10,7 @@ class Triangle
 
   def kind
     if (a + b > c) || (b + c > a) || (a + c > b)
-      
+
       then
         if a == b && b == c
         :isosceles
@@ -20,15 +20,15 @@ class Triangle
         :scalene
         end
 
-    elsif a < 0 || b < 0 || c < 0 
-      
-      begin 
+    elsif a < 0 || b < 0 || c < 0
+
+      begin
         raise TriangleError
-      rescue TriangleError 
+      rescue TriangleError
       end
     end
   end
-  
+
   class TriangleError < StandardError
   end
 end
