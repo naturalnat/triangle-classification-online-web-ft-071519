@@ -8,17 +8,7 @@ class Triangle
     @c = c
   end
 
-  def triangle?
-    if (a + b > c) || (b + c > a) || (a + c > b)
-      true
-    else
-      [a, b, c].each do |side|
-        raise TriangleError if side <= 0
-      end
-  end
-
   def kind
-    triangle?
     # if (a + b > c) || (b + c > a) || (a + c > b)
       # then
         if a == b && b == c
@@ -28,9 +18,19 @@ class Triangle
         else
         :scalene
         end
-
-      end
     end
+
+  def real_triangle
+    if (a + b > c) || (b + c > a) || (a + c > b)
+      kind
+
+     else
+        [a, b, c].each do |side|
+          raise TriangleError if side <= 0
+        end
+        end
+    end
+    
 
   class TriangleError < StandardError
   end
