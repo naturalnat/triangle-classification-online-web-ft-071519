@@ -19,7 +19,7 @@ def kind
       :scalene
     end
 end
- end
+
 
 
 
