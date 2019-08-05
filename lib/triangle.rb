@@ -9,7 +9,8 @@ class Triangle
   end
 
   def kind
-    if (a + b > c) || (b + c > a) || (a + c > b)
+    if (a + b > c) || (b + c > a) || (a + c > b) 
+      && a != 0 && b != 0 && c != 0 
 
       then
         if a == b && b == c
