@@ -8,17 +8,17 @@ class Triangle
     @c = c
   end
 
-  def triangle? 
+  def triangle?
     if (a + b > c) || (b + c > a) || (a + c > b)
-      true 
-    else 
+      true
+    else
       [a, b, c].each { |side| false if side <= 0 }
   end
 
   def kind
-    
+
     # if (a + b > c) || (b + c > a) || (a + c > b)
-  if triangle? == true 
+  if triangle? == true
       then
         if a == b && b == c
         :equilateral
