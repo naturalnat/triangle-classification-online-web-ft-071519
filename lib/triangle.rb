@@ -22,18 +22,6 @@ def kind
     end
 end
 
-
-
-
-  # def real_triangle
-  #   if (a + b > c) || (b + c > a) || (a + c > b)
-  #     true
-  #   elsif a <= 0 || b <= 0 || c <= 0
-  #         raise TriangleError
-  #       end
-  #       end
-  #   end
-
   class TriangleError < StandardError
   end
 
